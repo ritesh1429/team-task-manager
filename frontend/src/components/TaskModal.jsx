@@ -13,7 +13,7 @@ const TaskModal = ({ isOpen, onClose, onTaskCreated, projectId }) => {
     if (isOpen && user?.role === 'ADMIN') {
       const fetchUsers = async () => {
         try {
-          const res = await axios.get('http://localhost:5000/api/auth/users', {
+          const res = await axios.get('/api/auth/users', {
             headers: { Authorization: `Bearer ${user.token}` }
           });
           setUsers(res.data);
@@ -36,7 +36,7 @@ const TaskModal = ({ isOpen, onClose, onTaskCreated, projectId }) => {
       if (assignedTo) {
           payload.assignedTo = assignedTo;
       }
-      const res = await axios.post('http://localhost:5000/api/tasks', payload, {
+      const res = await axios.post('/api/tasks', payload, {
           headers: { Authorization: `Bearer ${user.token}` }
       });
       onTaskCreated(res.data);

@@ -10,7 +10,7 @@ const ProjectModal = ({ isOpen, onClose, onProjectCreated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/projects', 
+      const res = await axios.post('/api/projects', 
         { name, description },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );

@@ -20,7 +20,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/projects', {
+        const res = await axios.get('/api/projects', {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setProjects(res.data);
@@ -39,7 +39,7 @@ const Dashboard = () => {
   const fetchTasks = async (projectId) => {
       setTasksLoading(true);
       try {
-          const res = await axios.get(`http://localhost:5000/api/tasks/project/${projectId}`, {
+          const res = await axios.get(`/api/tasks/project/${projectId}`, {
               headers: { Authorization: `Bearer ${user.token}` }
           });
           setTasks(res.data);
@@ -70,7 +70,7 @@ const Dashboard = () => {
 
   const handleStatusChange = async (taskId, newStatus) => {
       try {
-          const res = await axios.put(`http://localhost:5000/api/tasks/${taskId}`, 
+          const res = await axios.put(`/api/tasks/${taskId}`, 
               { status: newStatus },
               { headers: { Authorization: `Bearer ${user.token}` } }
           );
