@@ -1,5 +1,8 @@
 # Team Task Manager (Full-Stack)
 
+**🌍 Live Deployment:** [https://team-task-manager-production-ba96.up.railway.app](https://team-task-manager-production-ba96.up.railway.app)  
+**💻 GitHub Repository:** [https://github.com/ritesh1429/team-task-manager](https://github.com/ritesh1429/team-task-manager)
+
 A full-stack web application built for managing teams, projects, and tasks with role-based access control.
 
 ## 🚀 Features
